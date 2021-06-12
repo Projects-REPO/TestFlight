@@ -12,7 +12,6 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
 /**
- *
  * @author its-JmPaunlagui
  */
 public class TestFlightUI extends javax.swing.JFrame {
@@ -21,7 +20,8 @@ public class TestFlightUI extends javax.swing.JFrame {
      * Creates new form TestFlightUI
      */
     public TestFlightUI() {
-        initComponents();setIcon();
+        initComponents();
+        setIcon();
         this.setTitle("FLIGHT SCHEDULER");
         UIManager.put("OptionPane.messageFont", new Font("Century Gothic", Font.PLAIN, 36));
     }
@@ -124,68 +124,68 @@ public class TestFlightUI extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblOrigin)
-                            .addComponent(lblAircraftName)
-                            .addComponent(lblDestination)
-                            .addComponent(lblArrivalTime)
-                            .addComponent(lblDateOfFlight)
-                            .addComponent(lblDepartureTime))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(txtAircraftName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
-                            .addComponent(txtOrigin, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtDestination, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtDepartureTime, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtDateOfFlight)
-                            .addComponent(txtArrivalTime, javax.swing.GroupLayout.Alignment.LEADING)))
-                    .addComponent(btnTravelRoute, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnOrigin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnClear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnCheckSchedule, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 539, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addComponent(lblOrigin)
+                                                        .addComponent(lblAircraftName)
+                                                        .addComponent(lblDestination)
+                                                        .addComponent(lblArrivalTime)
+                                                        .addComponent(lblDateOfFlight)
+                                                        .addComponent(lblDepartureTime))
+                                                .addGap(18, 18, 18)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                        .addComponent(txtAircraftName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
+                                                        .addComponent(txtOrigin, javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(txtDestination, javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(txtDepartureTime, javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(txtDateOfFlight)
+                                                        .addComponent(txtArrivalTime, javax.swing.GroupLayout.Alignment.LEADING)))
+                                        .addComponent(btnTravelRoute, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnOrigin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnClear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnCheckSchedule, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 539, Short.MAX_VALUE))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblAircraftName)
-                    .addComponent(txtAircraftName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblOrigin)
-                    .addComponent(txtOrigin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblDestination)
-                    .addComponent(txtDestination, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblDepartureTime)
-                    .addComponent(txtDepartureTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblArrivalTime)
-                    .addComponent(txtArrivalTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblDateOfFlight)
-                    .addComponent(txtDateOfFlight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addComponent(btnOrigin)
-                .addGap(18, 18, 18)
-                .addComponent(btnTravelRoute)
-                .addGap(18, 18, 18)
-                .addComponent(btnCheckSchedule)
-                .addGap(24, 24, 24)
-                .addComponent(btnClear)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lblAircraftName)
+                                        .addComponent(txtAircraftName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lblOrigin)
+                                        .addComponent(txtOrigin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lblDestination)
+                                        .addComponent(txtDestination, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lblDepartureTime)
+                                        .addComponent(txtDepartureTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lblArrivalTime)
+                                        .addComponent(txtArrivalTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lblDateOfFlight)
+                                        .addComponent(txtDateOfFlight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(26, 26, 26)
+                                .addComponent(btnOrigin)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnTravelRoute)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnCheckSchedule)
+                                .addGap(24, 24, 24)
+                                .addComponent(btnClear)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -220,7 +220,7 @@ public class TestFlightUI extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(
                     this, "Aircraft Name: " + flightSchedule.getAircraftName() + "\n"
-                    + "Origin: " + flightSchedule.getOrigin(),
+                            + "Origin: " + flightSchedule.getOrigin(),
                     "Flight Schedule Origin: " + flightSchedule.getOrigin(), JOptionPane.INFORMATION_MESSAGE, flightscheduleIcon
             );
         }
@@ -242,18 +242,13 @@ public class TestFlightUI extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(
                     this, "Aircraft Name: " + flightSchedule.getAircraftName() + "\n"
-                    + "Origin: " + flightSchedule.getOrigin() + "\n"
-                    + "Destination: " + flightSchedule.getDestination(),
+                            + "Origin: " + flightSchedule.getOrigin() + "\n"
+                            + "Destination: " + flightSchedule.getDestination(),
                     "Flight Schedule Route - " + "From: " + flightSchedule.getOrigin()
-                    + "  To: " + flightSchedule.getDestination(), JOptionPane.INFORMATION_MESSAGE, flightscheduleIcon
+                            + "  To: " + flightSchedule.getDestination(), JOptionPane.INFORMATION_MESSAGE, flightscheduleIcon
             );
         }
     }//GEN-LAST:event_btnTravelRouteActionPerformed
-
-    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
-        // TODO add your handling code here:
-        clear();
-    }//GEN-LAST:event_btnClearActionPerformed
 
     private void btnCheckScheduleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckScheduleActionPerformed
         // TODO add your handling code here:
@@ -274,17 +269,17 @@ public class TestFlightUI extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(
                     this, "Aircraft Name: " + flightSchedule.getAircraftName() + "\n"
-                    + "Origin: " + flightSchedule.getOrigin() + "\n"
-                    + "Destination: " + flightSchedule.getDestination() + "\n"
-                    + "Departure Time: " + flightSchedule.getDepartureTime() + "\n"
-                    + "Arrival Time: " + flightSchedule.getArrivalTime() + "\n"
-                    + "Date of Flight: " + flightSchedule.getDateOfFlight(),
+                            + "Origin: " + flightSchedule.getOrigin() + "\n"
+                            + "Destination: " + flightSchedule.getDestination() + "\n"
+                            + "Departure Time: " + flightSchedule.getDepartureTime() + "\n"
+                            + "Arrival Time: " + flightSchedule.getArrivalTime() + "\n"
+                            + "Date of Flight: " + flightSchedule.getDateOfFlight(),
                     "Check Flight Schedule", JOptionPane.INFORMATION_MESSAGE, flightscheduleIcon
             );
         }
     }//GEN-LAST:event_btnCheckScheduleActionPerformed
 
-        //Clear field
+    //Clear field
     void clear() {
         txtAircraftName.setText("");
         txtOrigin.setText("");
@@ -297,6 +292,12 @@ public class TestFlightUI extends javax.swing.JFrame {
                 JOptionPane.INFORMATION_MESSAGE, verified
         );
     }
+
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
+        // TODO add your handling code here:
+        clear();
+    }//GEN-LAST:event_btnClearActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -304,7 +305,7 @@ public class TestFlightUI extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
