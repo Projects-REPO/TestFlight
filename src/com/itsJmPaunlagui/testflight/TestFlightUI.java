@@ -27,7 +27,7 @@ public class TestFlightUI extends javax.swing.JFrame {
     }
 
     private void setIcon() {
-        setIconImage(Toolkit.getDefaultToolkit().getImage("src/com/itsJmPaunlagui/images/flight.png"));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("flight.png")));
     }
 
     /**
@@ -191,69 +191,76 @@ public class TestFlightUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private final ImageIcon flightscheduleIcon = new ImageIcon("src/com/itsJmPaunlagui/images/flightschedule.png");
-    private final ImageIcon warning = new ImageIcon("src/com/itsJmPaunlagui/images/warning.png");
-    private final ImageIcon verified = new ImageIcon("src/com/itsJmPaunlagui/images/verified.png");
+    //Image icon for the message dialog
+    ImageIcon flightscheduleIcon = new ImageIcon(getClass().getResource("flightschedule.png"));
+    ImageIcon warningIcon = new ImageIcon(getClass().getResource("warning.png"));
+    ImageIcon verifiedIcon = new ImageIcon(getClass().getResource("verified.png"));
 
+    // Checks the input fields and returns true if its not empty, otherwise it will return false
     public boolean isDataEntered() {
-        // returns true if its not empty, otherwise it will return false
         while (rootPaneCheckingEnabled) {
             return !(txtAircraftName.getText().isEmpty() || txtOrigin.getText().isEmpty()
-                    || txtDestination.getText().isEmpty() || txtDepartureTime.getText().isEmpty()
-                    || txtArrivalTime.getText().isEmpty() || txtDateOfFlight.getText().isEmpty());
+                        || txtDestination.getText().isEmpty() || txtDepartureTime.getText().isEmpty()
+                        || txtArrivalTime.getText().isEmpty() || txtDateOfFlight.getText().isEmpty()
+            );
         }
         return false;
     }
 
-    private void btnOriginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOriginActionPerformed
-        // TODO add your handling code here:
-        // Create an object of class Flight and we pass the parameters to the constructor which will set the values to it.
+    // Sets and Gets the AircraftName and Origin
+    private void btnOriginActionPerformed(java.awt.event.ActionEvent evt) {
+        //An object of class FlightSchedule
         FlightSchedule flightSchedule = new FlightSchedule();
+
         flightSchedule.setAircraftName(txtAircraftName.getText());
         flightSchedule.setOrigin(txtOrigin.getText());
 
         if (!isDataEntered()) { // if its empty it returns false, otherwise return true
             JOptionPane.showMessageDialog(
-                    this, "All fields required!", "Warning!",
-                    JOptionPane.WARNING_MESSAGE, warning
+                this, "All fields required!", "Warning!",
+                JOptionPane.WARNING_MESSAGE, warningIcon
             );
         } else {
             JOptionPane.showMessageDialog(
-                    this, "Aircraft Name: " + flightSchedule.getAircraftName() + "\n"
-                            + "Origin: " + flightSchedule.getOrigin(),
-                    "Flight Schedule Origin: " + flightSchedule.getOrigin(), JOptionPane.INFORMATION_MESSAGE, flightscheduleIcon
+                this, "Aircraft Name: " + flightSchedule.getAircraftName() + "\n"
+                + "Origin: " + flightSchedule.getOrigin(),
+                "Flight Schedule Origin: " + flightSchedule.getOrigin(), JOptionPane.INFORMATION_MESSAGE,
+                flightscheduleIcon
             );
         }
-    }//GEN-LAST:event_btnOriginActionPerformed
+    }
 
-    private void btnTravelRouteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTravelRouteActionPerformed
-        // TODO add your handling code here:
-        // Create an object of class Flight and we pass the parameters to the constructor which will set the values to it.
+    // Sets and Gets the AircraftName, Origin and Destination
+    private void btnTravelRouteActionPerformed(java.awt.event.ActionEvent evt) {
+        //An object of class FlightSchedule
         FlightSchedule flightSchedule = new FlightSchedule();
+
         flightSchedule.setAircraftName(txtAircraftName.getText());
         flightSchedule.setOrigin(txtOrigin.getText());
         flightSchedule.setDestination(txtDestination.getText());
 
         if (!isDataEntered()) { // if its empty it returns false, otherwise return true
             JOptionPane.showMessageDialog(
-                    this, "All fields required!", "Warning!",
-                    JOptionPane.WARNING_MESSAGE, warning
+                this, "All fields required!", "Warning!",
+                JOptionPane.WARNING_MESSAGE, warningIcon
             );
         } else {
             JOptionPane.showMessageDialog(
-                    this, "Aircraft Name: " + flightSchedule.getAircraftName() + "\n"
-                            + "Origin: " + flightSchedule.getOrigin() + "\n"
-                            + "Destination: " + flightSchedule.getDestination(),
-                    "Flight Schedule Route - " + "From: " + flightSchedule.getOrigin()
-                            + "  To: " + flightSchedule.getDestination(), JOptionPane.INFORMATION_MESSAGE, flightscheduleIcon
+                this, "Aircraft Name: " + flightSchedule.getAircraftName() + "\n"
+                + "Origin: " + flightSchedule.getOrigin() + "\n"
+                + "Destination: " + flightSchedule.getDestination(),
+                "Flight Schedule Route - " + "From: " + flightSchedule.getOrigin()
+                + "  To: " + flightSchedule.getDestination(), JOptionPane.INFORMATION_MESSAGE,
+                flightscheduleIcon
             );
         }
-    }//GEN-LAST:event_btnTravelRouteActionPerformed
+    }
 
-    private void btnCheckScheduleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckScheduleActionPerformed
-        // TODO add your handling code here:
-        // Create an object of class Flight and we pass the parameters to the constructor which will set the values to it.
+    // Sets and Gets the AircraftName, Origin, Destination, DepartureTime, ArrivalTime, and DateOfFlight
+    private void btnCheckScheduleActionPerformed(java.awt.event.ActionEvent evt) {
+        //An object of class FlightSchedule
         FlightSchedule flightSchedule = new FlightSchedule();
+
         flightSchedule.setAircraftName(txtAircraftName.getText());
         flightSchedule.setOrigin(txtOrigin.getText());
         flightSchedule.setDestination(txtDestination.getText());
@@ -263,23 +270,24 @@ public class TestFlightUI extends javax.swing.JFrame {
 
         if (!isDataEntered()) { // if its empty it returns false, otherwise return true
             JOptionPane.showMessageDialog(
-                    this, "All fields required!", "Warning!",
-                    JOptionPane.WARNING_MESSAGE, warning
+                this, "All fields required!", "Warning!",
+                JOptionPane.WARNING_MESSAGE, warningIcon
             );
         } else {
             JOptionPane.showMessageDialog(
-                    this, "Aircraft Name: " + flightSchedule.getAircraftName() + "\n"
-                            + "Origin: " + flightSchedule.getOrigin() + "\n"
-                            + "Destination: " + flightSchedule.getDestination() + "\n"
-                            + "Departure Time: " + flightSchedule.getDepartureTime() + "\n"
-                            + "Arrival Time: " + flightSchedule.getArrivalTime() + "\n"
-                            + "Date of Flight: " + flightSchedule.getDateOfFlight(),
-                    "Check Flight Schedule", JOptionPane.INFORMATION_MESSAGE, flightscheduleIcon
+                this, "Aircraft Name: " + flightSchedule.getAircraftName() + "\n"
+                + "Origin: " + flightSchedule.getOrigin() + "\n"
+                + "Destination: " + flightSchedule.getDestination() + "\n"
+                + "Departure Time: " + flightSchedule.getDepartureTime() + "\n"
+                + "Arrival Time: " + flightSchedule.getArrivalTime() + "\n"
+                + "Date of Flight: " + flightSchedule.getDateOfFlight(),
+                "Check Flight Schedule", JOptionPane.INFORMATION_MESSAGE,
+                flightscheduleIcon
             );
         }
-    }//GEN-LAST:event_btnCheckScheduleActionPerformed
+    }
 
-    //Clear field
+    // Clears the input fields
     void clear() {
         txtAircraftName.setText("");
         txtOrigin.setText("");
@@ -288,15 +296,15 @@ public class TestFlightUI extends javax.swing.JFrame {
         txtArrivalTime.setText("");
         txtDateOfFlight.setText("");
         JOptionPane.showMessageDialog(
-                this, "Cleared Successfully!", "Cleared",
-                JOptionPane.INFORMATION_MESSAGE, verified
+            this, "Cleared Successfully!", "Cleared",
+            JOptionPane.INFORMATION_MESSAGE, verifiedIcon
         );
     }
 
-    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
-        // TODO add your handling code here:
+    // Clears the input fields
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {
         clear();
-    }//GEN-LAST:event_btnClearActionPerformed
+    }
 
     /**
      * @param args the command line arguments

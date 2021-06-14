@@ -5,6 +5,7 @@ package com.itsJmPaunlagui.testflight;
  * @author JmPaunlagui
  */
 class FlightSchedule{
+
     private String AircraftName;
     private String Origin;
     private String Destination;
@@ -16,7 +17,11 @@ class FlightSchedule{
     public FlightSchedule(){
     }
     
-    public FlightSchedule(String AircraftName, String Origin, String Destination, String DepartureTime, String ArrivalTime, String DateOfFlight){
+    public FlightSchedule(
+            String AircraftName, String Origin,
+            String Destination, String DepartureTime,
+            String ArrivalTime, String DateOfFlight
+    ) {
         this.AircraftName = AircraftName;
         this.Origin = Origin;
         this.Destination = Destination;
