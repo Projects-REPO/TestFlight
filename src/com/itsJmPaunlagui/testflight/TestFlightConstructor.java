@@ -16,12 +16,8 @@ class FlightSchedule{
     // Empty constructor
     public FlightSchedule(){
     }
-    
-    public FlightSchedule(
-            String AircraftName, String Origin,
-            String Destination, String DepartureTime,
-            String ArrivalTime, String DateOfFlight
-    ) {
+
+    public FlightSchedule(int FlightID, String AircraftName, String Origin, String Destination, String DepartureTime, String ArrivalTime, String DateOfFlight) {
         this.AircraftName = AircraftName;
         this.Origin = Origin;
         this.Destination = Destination;
