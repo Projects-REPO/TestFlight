@@ -368,7 +368,7 @@ public class TestFlightUI extends javax.swing.JFrame {
         txtDepartureTime.setText(dtmFlightSchedules.getValueAt(index, 3).toString());
         txtArrivalTime.setText(dtmFlightSchedules.getValueAt(index, 4).toString());
         txtDateOfFlight.setText(dtmFlightSchedules.getValueAt(index, 5).toString());
-
+        
     }//GEN-LAST:event_tblFlightScheduleMouseClicked
 
     private void btnUpdateScheduleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateScheduleActionPerformed
@@ -381,29 +381,12 @@ public class TestFlightUI extends javax.swing.JFrame {
             TypeOfMesseage(Type);
         } else {
             if (tblFlightSchedule.getSelectedRowCount() == 1) {
-//                dtmFlightSchedule.setValueAt(txtAircraftName.getText(), index, 0);
-//                dtmFlightSchedule.setValueAt(txtOrigin.getText(), index, 1);
-//                dtmFlightSchedule.setValueAt(txtDestination.getText(), index, 2);
-//                dtmFlightSchedule.setValueAt(txtDepartureTime.getText(), index, 3);
-//                dtmFlightSchedule.setValueAt(txtArrivalTime.getText(), index, 4);
-//                dtmFlightSchedule.setValueAt(txtDateOfFlight.getText(), index, 5);
-
-                String[] data = {
-                    txtAircraftName.getText(),
-                    txtOrigin.getText(),
-                    txtDestination.getText(),
-                    txtDepartureTime.getText(),
-                    txtArrivalTime.getText(),
-                    txtDateOfFlight.getText()
-                };
-                Object[] rowData = new Object[dtmFlightSchedule.getRowCount()];
-
-                for (int i = 0; i < tblFlightSchedule.getRowCount(); i++) {
-
-                    String[] row = new String[data[i].length()];
-                    rowData[i] = dtmFlightSchedule.setValueAt(i, tblFlightSchedule.getSelectedRow(), i);
-                }
-
+                dtmFlightSchedule.setValueAt(txtAircraftName.getText(), index, 0);
+                dtmFlightSchedule.setValueAt(txtOrigin.getText(), index, 1);
+                dtmFlightSchedule.setValueAt(txtDestination.getText(), index, 2);
+                dtmFlightSchedule.setValueAt(txtDepartureTime.getText(), index, 3);
+                dtmFlightSchedule.setValueAt(txtArrivalTime.getText(), index, 4);
+                dtmFlightSchedule.setValueAt(txtDateOfFlight.getText(), index, 5);
                 String Type = "update";
                 TypeOfMesseage(Type);
             } else {
